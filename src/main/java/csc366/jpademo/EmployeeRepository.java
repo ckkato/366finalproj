@@ -17,9 +17,9 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("from Employee e where e.firstName = :name or e.lastName = :name")
     Employee findByNameJpql(@Param("name") String name);
 
-//    // JPQL query with join
-//    @Query("select p from Person p join p.addresses addr where p.firstName = :name or p.lastName = :name")
-//    Person findByNameWithAddressJpql(@Param("name") String name);
+    //    // JPQL query with join
+    @Query("select e from Employee e join e.payrolls payrolls where e.firstName = :name or e.lastName = :name")
+    Employee findByNameWithIdJpql(@Param("name") String name);
 
     // Native SQL query  (validity not checked, invalid SQL will cause runtime exception)
     @Query(value = "select * from employee as e where e.first_name = :name or e.last_name = :name", nativeQuery = true)

@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -47,9 +49,14 @@ public class EmployeeTest {
     private EmployeeRepository employeeRepository;
 
     private final Employee employee = new Employee("test", "test", new Date());  // "reference" employee
+    private final Payroll payroll = new Payroll(employee.getEmplId(), 2.0, "test");
+
 
     @BeforeEach
     private void setup() {
+        employeeRepository.saveAndFlush(employee);
+        payroll.setEmplId(employee.getEmplId());
+        employee.addPayroll(payroll);
         employeeRepository.saveAndFlush(employee);
     }
 
@@ -63,7 +70,21 @@ public class EmployeeTest {
         assertNotNull(employee);
         assertEquals(employee2.getFirstName(), employee.getFirstName());
         assertEquals(employee2.getLastName(), employee.getLastName());
+        assertEquals(employee2.getPayrolls().size(), employee.getPayrolls().size());
+        assertEquals(employee2.getPayrolls().size(), 1);
     }
 
+    @Test
+    @Order(4)
+    public void testRemovePayrollAndFlush() {
+        Employee e = employeeRepository.findByFirstName("test");
+        Payroll p = new ArrayList<Payroll>(e.getPayrolls()).get(0);  // get on address
+        e.removePayroll(p);
+        employeeRepository.saveAndFlush(e);
+        log.info(e.toString());
 
+        Employee employee2 = employeeRepository.findByFirstName("test");
+        assertEquals(employee2.getPayrolls().size(), 0);
+    }
 }
+
