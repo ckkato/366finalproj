@@ -15,8 +15,6 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.OrderColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
 import javax.persistence.CascadeType;
 import javax.persistence.FetchType;
 import javax.persistence.UniqueConstraint;
@@ -24,11 +22,14 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 @Entity  // indicates that this class maps to a database table
-
+@Table(name = "payroll",
+       // requires @Column(name=...)
+       uniqueConstraints = @UniqueConstraint(columnNames={"id"})
+)
 public class Payroll {
     @Id
-    @Column(name="empl_id")
-    private Long emplId;
+    @Column(name="id")
+    private Long id;
 
     @NotNull
     @Column(name="pay_rate")
@@ -37,10 +38,6 @@ public class Payroll {
     @NotNull
     @Column(name="pay_period")
     private String payPeriod;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_empl_id", nullable = false)
-    private Employee employee;
 
 //    @OneToMany(mappedBy = "person",       // the join column should be in *Address*
 //               cascade = CascadeType.ALL, // all JPA actions (persist, remove, refresh, merge, detach) propagate to each address in the List
@@ -51,17 +48,17 @@ public class Payroll {
 //
     public Payroll() { }
     
-    public Payroll(Long emplId, Double payRate, String payPeriod) {
-	    this.emplId = emplId;
+    public Payroll(Long id, Double payRate, String payPeriod) {
+	    this.id = id;
 	    this.payRate = payRate;
 	    this.payPeriod = payPeriod;
     }
-
-    public Long getEmplId() {
-	    return emplId;
+    
+    public Long getId() {
+	    return id;
     }
-    public void setEmplId(Long emplId) {
-	    this.emplId = emplId;
+    public void setId(Long id) {
+	    this.id = id;
     }
 
     public Double getPayRate() { return payRate; }
@@ -74,13 +71,23 @@ public class Payroll {
 	    this.payPeriod = payPeriod;
     }
 
-    public Employee getEmployee() { return employee; }
-    public void setEmployee(Employee employee) { this.employee = employee; }
+//
+//    public void addAddress(Address a) {
+//	addresses.add(a);
+//	a.setPerson(this);
+//    }
+//    public void removeAddress(Address a) {
+//	addresses.remove(a);
+//	a.setPerson(null);
+//    }
+//    public List<Address> getAddresses() {
+//	return this.addresses;
+//    }
     
     @Override
     public String toString() {
 	    StringJoiner sj = new StringJoiner("," , Payroll.class.getSimpleName() + "[" , "]");
-	    sj.add(emplId.toString()).add(payRate.toString()).add(payPeriod);
+	    sj.add(id.toString()).add(payRate.toString()).add(payPeriod);
 	    return sj.toString();
     }
 

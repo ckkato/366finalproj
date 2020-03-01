@@ -22,10 +22,12 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 @Entity  // indicates that this class maps to a database table
-@Table(name = "employee")
+@Table(name = "employee",
+       // requires @Column(name=...) 
+       uniqueConstraints = @UniqueConstraint(columnNames={"emplId"})
+)
 public class Employee {
     @Id
-    @Column(name="empl_id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long emplId;
 
@@ -42,12 +44,13 @@ public class Employee {
     @Temporal(TemporalType.TIMESTAMP)
     private Date startDate;
 
-    @OneToMany(mappedBy = "employee",
-               cascade = CascadeType.ALL,
-               orphanRemoval = true,
-               fetch = FetchType.LAZY)
-    private List<Payroll> payrolls = new ArrayList<>();
-
+//    @OneToMany(mappedBy = "person",       // the join column should be in *Address*
+//               cascade = CascadeType.ALL, // all JPA actions (persist, remove, refresh, merge, detach) propagate to each address in the List
+//               orphanRemoval = true,      //  address records that are no longer attached to a person are removed
+//               fetch = FetchType.LAZY)
+//    //@OrderColumn(name = "list_idx")
+//    private List<Address> addresses = new ArrayList<>();
+//
     public Employee() { }
     
     public Employee(String firstName, String lastName, Date startDate) {
@@ -84,27 +87,24 @@ public class Employee {
     public void setStartDate(Date startDate) {
 	    this.startDate = startDate;
     }
-
-    public void addPayroll(Payroll payroll) {
-        payrolls.add(payroll);
-        payroll.setEmployee(this);
-    }
-    public void removePayroll(Payroll payroll) {
-        payrolls.remove(payroll);
-        payroll.setEmployee(null);
-    }
-
-    public List<Payroll> getPayrolls() {
-        return this.payrolls;
-    }
+//
+//    public void addAddress(Address a) {
+//	addresses.add(a);
+//	a.setPerson(this);
+//    }
+//    public void removeAddress(Address a) {
+//	addresses.remove(a);
+//	a.setPerson(null);
+//    }
+//    public List<Address> getAddresses() {
+//	return this.addresses;
+//    }
     
     @Override
     public String toString() {
 	    StringJoiner sj = new StringJoiner("," , Employee.class.getSimpleName() + "[" , "]");
-	    sj.add(emplId.toString()).add(firstName).add(lastName).add("startDate="+startDate.toString())
-            .add("payrolls="+payrolls.toString());
+	    sj.add(emplId.toString()).add(firstName).add(lastName).add("startDate="+startDate.toString());
 	    return sj.toString();
     }
-
 
 }

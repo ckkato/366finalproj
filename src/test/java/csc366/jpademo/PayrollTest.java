@@ -39,30 +39,30 @@ import org.slf4j.LoggerFactory;
         "logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n"
 })
 @TestMethodOrder(OrderAnnotation.class)
-public class EmployeeTest {
+public class PayrollTest {
 
-    private final static Logger log = LoggerFactory.getLogger(EmployeeTest.class);
+    private final static Logger log = LoggerFactory.getLogger(PayrollTest.class);
 
     @Autowired
-    private EmployeeRepository employeeRepository;
+    private PayrollRepository payrollRepository;
 
-    private final Employee employee = new Employee("test", "test", new Date());  // "reference" employee
+    private final Payroll payroll = new Payroll(new Long(1), new Double(2.0), "test");  // "reference" payroll
 
     @BeforeEach
     private void setup() {
-        employeeRepository.saveAndFlush(employee);
+        payrollRepository.saveAndFlush(payroll);
     }
 
     @Test
     @Order(1)
-    public void testSaveEmployee() {
-        Employee employee2 = employeeRepository.findByFirstName("test");
+    public void testSavePayroll() {
+        Payroll payroll2 = payrollRepository.findById(1);
 
-        log.info(employee2.toString());
+        log.info(payroll2.toString());
 
-        assertNotNull(employee);
-        assertEquals(employee2.getFirstName(), employee.getFirstName());
-        assertEquals(employee2.getLastName(), employee.getLastName());
+        assertNotNull(payroll);
+        assertEquals(payroll2.getPayRate(), payroll.getPayRate());
+        assertEquals(payroll2.getPayPeriod(), payroll.getPayPeriod());
     }
 
 
