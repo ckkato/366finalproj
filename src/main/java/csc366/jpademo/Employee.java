@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.OrderColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.CascadeType;
 import javax.persistence.FetchType;
 import javax.persistence.UniqueConstraint;
@@ -42,6 +43,9 @@ public class Employee {
     @Temporal(TemporalType.TIMESTAMP)
     private Date startDate;
 
+    @ManyToOne
+    private Store store;
+
     @OneToMany(mappedBy = "employee",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
@@ -54,6 +58,14 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.startDate = startDate;
+    }
+
+    public Store getStore(){
+        return store;
+    }
+
+    public void setStore(Store store){
+        this.store = store;
     }
 
     public Long getEmplId() {

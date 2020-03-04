@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="csc366.jpademo.Demo0" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-02-27T01:14:50" hostname="Camerons-MacBook-Pro-2.local" time="0.268">
+<testsuite name="csc366.jpademo.Demo0" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-03-04T05:56:18" hostname="SE-PC" time="0.438">
   <properties/>
-  <testcase name="testSavePerson()" classname="csc366.jpademo.Demo0" time="0.161"/>
-  <testcase name="testGetPerson()" classname="csc366.jpademo.Demo0" time="0.009"/>
-  <testcase name="testDeletePerson()" classname="csc366.jpademo.Demo0" time="0.026"/>
-  <testcase name="testFindAllPersons()" classname="csc366.jpademo.Demo0" time="0.013"/>
-  <testcase name="testDeletByPersonId()" classname="csc366.jpademo.Demo0" time="0.011"/>
+  <testcase name="testSavePerson()" classname="csc366.jpademo.Demo0" time="0.305"/>
+  <testcase name="testGetPerson()" classname="csc366.jpademo.Demo0" time="0.011"/>
+  <testcase name="testDeletePerson()" classname="csc366.jpademo.Demo0" time="0.036"/>
+  <testcase name="testFindAllPersons()" classname="csc366.jpademo.Demo0" time="0.018"/>
+  <testcase name="testDeletByPersonId()" classname="csc366.jpademo.Demo0" time="0.015"/>
   <testcase name="testJpqlFinder()" classname="csc366.jpademo.Demo0" time="0.012"/>
-  <testcase name="testSqlFinder()" classname="csc366.jpademo.Demo0" time="0.03"/>
-  <system-out><![CDATA[17:14:47.984 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-17:14:47.995 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-17:14:48.021 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [csc366.jpademo.Demo0] from class [org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper]
-17:14:48.033 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [csc366.jpademo.Demo0], using SpringBootContextLoader
-17:14:48.037 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [csc366.jpademo.Demo0]: class path resource [csc366/jpademo/Demo0-context.xml] does not exist
-17:14:48.038 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [csc366.jpademo.Demo0]: class path resource [csc366/jpademo/Demo0Context.groovy] does not exist
-17:14:48.038 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [csc366.jpademo.Demo0]: no resource found for suffixes {-context.xml, Context.groovy}.
-17:14:48.039 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [csc366.jpademo.Demo0]: Demo0 does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:14:48.080 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [csc366.jpademo.Demo0]
-17:14:48.124 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/cameronkato/Desktop/jpa-demo1-master/build/classes/java/main/csc366/jpademo/JpaDemoApplication.class]
-17:14:48.129 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration csc366.jpademo.JpaDemoApplication for test class csc366.jpademo.Demo0
-17:14:48.131 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - @TestExecutionListeners is not present for class [csc366.jpademo.Demo0]: using defaults.
-17:14:48.131 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-17:14:48.146 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30f4cbb0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6353e4c1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3134ee4c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@476cf28f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51d31899, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2dda8b8e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b8a46f7, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b523383, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@528cf7a0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2bf39084, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4227d6f3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@48633b1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7de7e444]
-17:14:48.149 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@28f873a9 testClass = Demo0, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@52d286a6 testClass = Demo0, locations = '{}', classes = '{class csc366.jpademo.JpaDemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{spring.main.banner-mode=off, spring.jpa.hibernate.ddl-auto=update, logging.level.root=ERROR, logging.level.csc366=DEBUG, logging.level.org.hibernate.SQL=DEBUG, logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE, spring.jpa.properties.hibernate.format_sql=true, spring.jpa.show-sql=false, spring.jpa.properties.hibernate.show_sql=false, logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@10bf9906, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@6e00f8e3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b047957, [ImportsContextCustomizer@407a01fe key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51b11439, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@66b1fad8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-17:14:48.157 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@28f873a9 testClass = Demo0, testInstance = csc366.jpademo.Demo0@1a2780df, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@52d286a6 testClass = Demo0, locations = '{}', classes = '{class csc366.jpademo.JpaDemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{spring.main.banner-mode=off, spring.jpa.hibernate.ddl-auto=update, logging.level.root=ERROR, logging.level.csc366=DEBUG, logging.level.org.hibernate.SQL=DEBUG, logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE, spring.jpa.properties.hibernate.format_sql=true, spring.jpa.show-sql=false, spring.jpa.properties.hibernate.show_sql=false, logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@10bf9906, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@6e00f8e3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3b047957, [ImportsContextCustomizer@407a01fe key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@51b11439, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@66b1fad8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
-17:14:48.249 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, spring.main.banner-mode=off, spring.jpa.hibernate.ddl-auto=update, logging.level.root=ERROR, logging.level.csc366=DEBUG, logging.level.org.hibernate.SQL=DEBUG, logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE, spring.jpa.properties.hibernate.format_sql=true, spring.jpa.show-sql=false, spring.jpa.properties.hibernate.show_sql=false, logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true, server.port=-1}
-2020-02-26 17:14:48 - Starting Demo0 on Camerons-MacBook-Pro-2.local with PID 69157 (started by cameronkato in /Users/cameronkato/Desktop/jpa-demo1-master)
-2020-02-26 17:14:48 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2020-02-26 17:14:48 - No active profile set, falling back to default profiles: default
-2020-02-26 17:14:50 - 
+  <testcase name="testSqlFinder()" classname="csc366.jpademo.Demo0" time="0.033"/>
+  <system-out><![CDATA[21:56:14.130 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:56:14.155 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:56:14.196 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [csc366.jpademo.Demo0] from class [org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper]
+21:56:14.217 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [csc366.jpademo.Demo0], using SpringBootContextLoader
+21:56:14.220 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [csc366.jpademo.Demo0]: class path resource [csc366/jpademo/Demo0-context.xml] does not exist
+21:56:14.221 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [csc366.jpademo.Demo0]: class path resource [csc366/jpademo/Demo0Context.groovy] does not exist
+21:56:14.221 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [csc366.jpademo.Demo0]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:56:14.222 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [csc366.jpademo.Demo0]: Demo0 does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:56:14.281 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [csc366.jpademo.Demo0]
+21:56:14.352 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Samue\Desktop\code\java\csc366\366finalproj\build\classes\java\main\csc366\jpademo\JpaDemoApplication.class]
+21:56:14.355 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration csc366.jpademo.JpaDemoApplication for test class csc366.jpademo.Demo0
+21:56:14.357 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - @TestExecutionListeners is not present for class [csc366.jpademo.Demo0]: using defaults.
+21:56:14.358 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:56:14.382 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@59604bfb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73ac5674, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@25356b2c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@418a9fce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1a6e3b97, org.springframework.test.context.transaction.TransactionalTestExecutionListener@b60c158, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@502b713, org.springframework.test.context.event.EventPublishingTestExecutionListener@10633c92, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7b3a1f8a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@76dd7bb4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@66f7f053, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6ff9d7b3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@44944389]
+21:56:14.386 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@22dfcc51 testClass = Demo0, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@163a863b testClass = Demo0, locations = '{}', classes = '{class csc366.jpademo.JpaDemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{spring.main.banner-mode=off, spring.jpa.hibernate.ddl-auto=update, logging.level.root=ERROR, logging.level.csc366=DEBUG, logging.level.org.hibernate.SQL=DEBUG, logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE, spring.jpa.properties.hibernate.format_sql=true, spring.jpa.show-sql=false, spring.jpa.properties.hibernate.show_sql=false, logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@2de81e5d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4d7bc5dc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2d386b31, [ImportsContextCustomizer@43a57f5f key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13e9606c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@262acc69, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+21:56:14.400 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@22dfcc51 testClass = Demo0, testInstance = csc366.jpademo.Demo0@7bd2fea5, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@163a863b testClass = Demo0, locations = '{}', classes = '{class csc366.jpademo.JpaDemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{spring.main.banner-mode=off, spring.jpa.hibernate.ddl-auto=update, logging.level.root=ERROR, logging.level.csc366=DEBUG, logging.level.org.hibernate.SQL=DEBUG, logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE, spring.jpa.properties.hibernate.format_sql=true, spring.jpa.show-sql=false, spring.jpa.properties.hibernate.show_sql=false, logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@2de81e5d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4d7bc5dc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2d386b31, [ImportsContextCustomizer@43a57f5f key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13e9606c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@262acc69, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+21:56:14.677 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, spring.main.banner-mode=off, spring.jpa.hibernate.ddl-auto=update, logging.level.root=ERROR, logging.level.csc366=DEBUG, logging.level.org.hibernate.SQL=DEBUG, logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE, spring.jpa.properties.hibernate.format_sql=true, spring.jpa.show-sql=false, spring.jpa.properties.hibernate.show_sql=false, logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n, org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true, server.port=-1}
+2020-03-03 21:56:15 - Starting Demo0 on SE-pc with PID 231692 (started by Samue in C:\Users\Samue\Desktop\code\java\csc366\366finalproj)
+2020-03-03 21:56:15 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-03-03 21:56:15 - No active profile set, falling back to default profiles: default
+2020-03-03 21:56:17 - 
     
     create table address (
        id bigint generated by default as identity,
@@ -39,7 +39,26 @@
         person_id bigint,
         primary key (id)
     )
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
+    
+    create table employee (
+       empl_id bigint generated by default as identity,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        start_date timestamp not null,
+        store_id bigint,
+        primary key (empl_id)
+    )
+2020-03-03 21:56:17 - 
+    
+    create table payroll (
+       empl_id bigint not null,
+        pay_period varchar(255) not null,
+        pay_rate double not null,
+        employee_empl_id bigint not null,
+        primary key (empl_id)
+    )
+2020-03-03 21:56:17 - 
     
     create table person (
        id bigint generated by default as identity,
@@ -48,177 +67,196 @@
         last_name varchar(255) not null,
         primary key (id)
     )
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
+    
+    create table store (
+       id bigint generated by default as identity,
+        revenue integer not null,
+        primary key (id)
+    )
+2020-03-03 21:56:17 - 
     
     alter table person 
        drop constraint if exists UK6wjuvbalf4x2thqkfxejnlbvh
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
     
     alter table person 
        add constraint UK6wjuvbalf4x2thqkfxejnlbvh unique (last_name, first_name)
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
     
     alter table person 
        drop constraint if exists UK_fwmwi44u55bo4rvwsv0cln012
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
     
     alter table person 
        add constraint UK_fwmwi44u55bo4rvwsv0cln012 unique (email)
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
     
     alter table person 
        drop constraint if exists UK_6atyavdanbj9pwrbrod7irb2x
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
     
     alter table person 
        add constraint UK_6atyavdanbj9pwrbrod7irb2x unique (last_name)
-2020-02-26 17:14:50 - 
+2020-03-03 21:56:17 - 
     
     alter table address 
        add constraint FK81ihijcn1kdfwffke0c0sjqeb 
        foreign key (person_id) 
        references person
-2020-02-26 17:14:50 - Started Demo0 in 2.684 seconds (JVM running for 3.724)
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:17 - 
+    
+    alter table employee 
+       add constraint FKeg6451w5jta9oobtdgfe5c3n5 
+       foreign key (store_id) 
+       references store
+2020-03-03 21:56:17 - 
+    
+    alter table payroll 
+       add constraint FKho65wd7dl0mmb6gjxio18re71 
+       foreign key (employee_empl_id) 
+       references employee
+2020-03-03 21:56:18 - Started Demo0 in 3.737 seconds (JVM running for 5.778)
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     select
-        person0_.id as id1_1_,
-        person0_.email as email2_1_,
-        person0_.first_name as first_na3_1_,
-        person0_.last_name as last_nam4_1_ 
+        person0_.id as id1_3_,
+        person0_.email as email2_3_,
+        person0_.first_name as first_na3_3_,
+        person0_.last_name as last_nam4_3_ 
     from
         person person0_ 
     where
         person0_.first_name=?
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - Person[1,test,test,addresses=[]]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - Person[1,test,test,addresses=[]]
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     select
-        person0_.id as id1_1_,
-        person0_.email as email2_1_,
-        person0_.first_name as first_na3_1_,
-        person0_.last_name as last_nam4_1_ 
+        person0_.id as id1_3_,
+        person0_.email as email2_3_,
+        person0_.first_name as first_na3_3_,
+        person0_.last_name as last_nam4_3_ 
     from
         person person0_ 
     where
         person0_.first_name=?
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     delete 
     from
         person 
     where
         id=?
-2020-02-26 17:14:51 - binding parameter [1] as [BIGINT] - [3]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [BIGINT] - [3]
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     select
-        person0_.id as id1_1_,
-        person0_.email as email2_1_,
-        person0_.first_name as first_na3_1_,
-        person0_.last_name as last_nam4_1_ 
+        person0_.id as id1_3_,
+        person0_.email as email2_3_,
+        person0_.first_name as first_na3_3_,
+        person0_.last_name as last_nam4_3_ 
     from
         person person0_
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     select
-        person0_.id as id1_1_,
-        person0_.email as email2_1_,
-        person0_.first_name as first_na3_1_,
-        person0_.last_name as last_nam4_1_ 
+        person0_.id as id1_3_,
+        person0_.email as email2_3_,
+        person0_.first_name as first_na3_3_,
+        person0_.last_name as last_nam4_3_ 
     from
         person person0_ 
     where
         person0_.first_name=?
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     delete 
     from
         person 
     where
         id=?
-2020-02-26 17:14:51 - binding parameter [1] as [BIGINT] - [5]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [BIGINT] - [5]
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     select
-        person0_.id as id1_1_,
-        person0_.email as email2_1_,
-        person0_.first_name as first_na3_1_,
-        person0_.last_name as last_nam4_1_ 
+        person0_.id as id1_3_,
+        person0_.email as email2_3_,
+        person0_.first_name as first_na3_3_,
+        person0_.last_name as last_nam4_3_ 
     from
         person person0_ 
     where
         person0_.first_name=? 
         or person0_.last_name=?
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     insert 
     into
         person
         (id, email, first_name, last_name) 
     values
         (null, ?, ?, ?)
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [3] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - 
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test@calpoly.edu]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [3] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - 
     select
         * 
     from
@@ -226,8 +264,8 @@
     where
         p.first_name = ? 
         or p.last_name = ?
-2020-02-26 17:14:51 - binding parameter [1] as [VARCHAR] - [test]
-2020-02-26 17:14:51 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:18 - binding parameter [2] as [VARCHAR] - [test]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

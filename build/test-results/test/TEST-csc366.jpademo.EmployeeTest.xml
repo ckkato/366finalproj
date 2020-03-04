@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="csc366.jpademo.EmployeeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-03-04T05:56:19" hostname="SE-PC" time="0.055">
+  <properties/>
+  <testcase name="testSaveEmployee()" classname="csc366.jpademo.EmployeeTest" time="0.032"/>
+  <testcase name="testRemovePayrollAndFlush()" classname="csc366.jpademo.EmployeeTest" time="0.021"/>
+  <system-out><![CDATA[2020-03-03 21:56:19 - 
+    insert 
+    into
+        employee
+        (empl_id, first_name, last_name, start_date, store_id) 
+    values
+        (null, ?, ?, ?, ?)
+2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - binding parameter [3] as [TIMESTAMP] - [Tue Mar 03 21:56:19 PST 2020]
+2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [null]
+2020-03-03 21:56:19 - 
+    select
+        payroll0_.empl_id as empl_id1_2_0_,
+        payroll0_.employee_empl_id as employee4_2_0_,
+        payroll0_.pay_period as pay_peri2_2_0_,
+        payroll0_.pay_rate as pay_rate3_2_0_ 
+    from
+        payroll payroll0_ 
+    where
+        payroll0_.empl_id=?
+2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [1]
+2020-03-03 21:56:19 - 
+    insert 
+    into
+        payroll
+        (employee_empl_id, pay_period, pay_rate, empl_id) 
+    values
+        (?, ?, ?, ?)
+2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [1]
+2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - binding parameter [3] as [DOUBLE] - [2.0]
+2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [1]
+2020-03-03 21:56:19 - 
+    select
+        employee0_.empl_id as empl_id1_1_,
+        employee0_.first_name as first_na2_1_,
+        employee0_.last_name as last_nam3_1_,
+        employee0_.start_date as start_da4_1_,
+        employee0_.store_id as store_id5_1_ 
+    from
+        employee employee0_ 
+    where
+        employee0_.first_name=?
+2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - Employee[1,test,test,startDate=Tue Mar 03 21:56:19 PST 2020,payrolls=[Payroll[1,2.0,test]]]
+2020-03-03 21:56:19 - 
+    insert 
+    into
+        employee
+        (empl_id, first_name, last_name, start_date, store_id) 
+    values
+        (null, ?, ?, ?, ?)
+2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - binding parameter [3] as [TIMESTAMP] - [Tue Mar 03 21:56:19 PST 2020]
+2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [null]
+2020-03-03 21:56:19 - 
+    select
+        payroll0_.empl_id as empl_id1_2_0_,
+        payroll0_.employee_empl_id as employee4_2_0_,
+        payroll0_.pay_period as pay_peri2_2_0_,
+        payroll0_.pay_rate as pay_rate3_2_0_ 
+    from
+        payroll payroll0_ 
+    where
+        payroll0_.empl_id=?
+2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [2]
+2020-03-03 21:56:19 - 
+    insert 
+    into
+        payroll
+        (employee_empl_id, pay_period, pay_rate, empl_id) 
+    values
+        (?, ?, ?, ?)
+2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [2]
+2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - binding parameter [3] as [DOUBLE] - [2.0]
+2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [2]
+2020-03-03 21:56:19 - 
+    select
+        employee0_.empl_id as empl_id1_1_,
+        employee0_.first_name as first_na2_1_,
+        employee0_.last_name as last_nam3_1_,
+        employee0_.start_date as start_da4_1_,
+        employee0_.store_id as store_id5_1_ 
+    from
+        employee employee0_ 
+    where
+        employee0_.first_name=?
+2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-03 21:56:19 - 
+    delete 
+    from
+        payroll 
+    where
+        empl_id=?
+2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [2]
+2020-03-03 21:56:19 - Employee[2,test,test,startDate=Tue Mar 03 21:56:19 PST 2020,payrolls=[]]
+2020-03-03 21:56:19 - 
+    select
+        employee0_.empl_id as empl_id1_1_,
+        employee0_.first_name as first_na2_1_,
+        employee0_.last_name as last_nam3_1_,
+        employee0_.start_date as start_da4_1_,
+        employee0_.store_id as store_id5_1_ 
+    from
+        employee employee0_ 
+    where
+        employee0_.first_name=?
+2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
