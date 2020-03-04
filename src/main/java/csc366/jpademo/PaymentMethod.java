@@ -54,6 +54,8 @@ public class PaymentMethod {
 //    private List<Address> addresses = new ArrayList<>();
 //
 
+    public PaymentMethod() { }
+
     public PaymentMethod(Long cId, Boolean isCash, Double cardNumber, String cardType) {
         this.cId = cId;
         this.isCash = isCash;

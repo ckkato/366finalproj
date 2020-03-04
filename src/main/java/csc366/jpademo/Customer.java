@@ -32,6 +32,8 @@ public class Customer {
 
     private List<PaymentMethod> paymentMethods = new ArrayList<>();
 
+    public Customer() { }
+
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
