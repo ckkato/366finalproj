@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.053s</div>
+<div class="counter">0.051s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testRemovePayrollAndFlush()</td>
-<td class="success">0.021s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -92,18 +92,18 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2020-03-03 21:56:19 - 
+<pre>2020-03-11 15:15:38 - 
     insert 
     into
         employee
         (empl_id, first_name, last_name, start_date, store_id) 
     values
         (null, ?, ?, ?, ?)
-2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - binding parameter [3] as [TIMESTAMP] - [Tue Mar 03 21:56:19 PST 2020]
-2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [null]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [3] as [TIMESTAMP] - [Wed Mar 11 15:15:38 PDT 2020]
+2020-03-11 15:15:38 - binding parameter [4] as [BIGINT] - [null]
+2020-03-11 15:15:38 - 
     select
         payroll0_.empl_id as empl_id1_2_0_,
         payroll0_.employee_empl_id as employee4_2_0_,
@@ -113,19 +113,19 @@
         payroll payroll0_ 
     where
         payroll0_.empl_id=?
-2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [1]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [BIGINT] - [1]
+2020-03-11 15:15:38 - 
     insert 
     into
         payroll
         (employee_empl_id, pay_period, pay_rate, empl_id) 
     values
         (?, ?, ?, ?)
-2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [1]
-2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - binding parameter [3] as [DOUBLE] - [2.0]
-2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [1]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [BIGINT] - [1]
+2020-03-11 15:15:38 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [3] as [DOUBLE] - [2.0]
+2020-03-11 15:15:38 - binding parameter [4] as [BIGINT] - [1]
+2020-03-11 15:15:38 - 
     select
         employee0_.empl_id as empl_id1_1_,
         employee0_.first_name as first_na2_1_,
@@ -136,20 +136,20 @@
         employee employee0_ 
     where
         employee0_.first_name=?
-2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - Employee[1,test,test,startDate=Tue Mar 03 21:56:19 PST 2020,payrolls=[Payroll[1,2.0,test]]]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - Employee[1,test,test,startDate=Wed Mar 11 15:15:38 PDT 2020,payrolls=[Payroll[1,2.0,test]]]
+2020-03-11 15:15:38 - 
     insert 
     into
         employee
         (empl_id, first_name, last_name, start_date, store_id) 
     values
         (null, ?, ?, ?, ?)
-2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - binding parameter [3] as [TIMESTAMP] - [Tue Mar 03 21:56:19 PST 2020]
-2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [null]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [3] as [TIMESTAMP] - [Wed Mar 11 15:15:38 PDT 2020]
+2020-03-11 15:15:38 - binding parameter [4] as [BIGINT] - [null]
+2020-03-11 15:15:38 - 
     select
         payroll0_.empl_id as empl_id1_2_0_,
         payroll0_.employee_empl_id as employee4_2_0_,
@@ -159,19 +159,19 @@
         payroll payroll0_ 
     where
         payroll0_.empl_id=?
-2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [2]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [BIGINT] - [2]
+2020-03-11 15:15:38 - 
     insert 
     into
         payroll
         (employee_empl_id, pay_period, pay_rate, empl_id) 
     values
         (?, ?, ?, ?)
-2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [2]
-2020-03-03 21:56:19 - binding parameter [2] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - binding parameter [3] as [DOUBLE] - [2.0]
-2020-03-03 21:56:19 - binding parameter [4] as [BIGINT] - [2]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [BIGINT] - [2]
+2020-03-11 15:15:38 - binding parameter [2] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [3] as [DOUBLE] - [2.0]
+2020-03-11 15:15:38 - binding parameter [4] as [BIGINT] - [2]
+2020-03-11 15:15:38 - 
     select
         employee0_.empl_id as empl_id1_1_,
         employee0_.first_name as first_na2_1_,
@@ -182,16 +182,16 @@
         employee employee0_ 
     where
         employee0_.first_name=?
-2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - 
     delete 
     from
         payroll 
     where
         empl_id=?
-2020-03-03 21:56:19 - binding parameter [1] as [BIGINT] - [2]
-2020-03-03 21:56:19 - Employee[2,test,test,startDate=Tue Mar 03 21:56:19 PST 2020,payrolls=[]]
-2020-03-03 21:56:19 - 
+2020-03-11 15:15:38 - binding parameter [1] as [BIGINT] - [2]
+2020-03-11 15:15:38 - Employee[2,test,test,startDate=Wed Mar 11 15:15:38 PDT 2020,payrolls=[]]
+2020-03-11 15:15:38 - 
     select
         employee0_.empl_id as empl_id1_1_,
         employee0_.first_name as first_na2_1_,
@@ -202,7 +202,7 @@
         employee employee0_ 
     where
         employee0_.first_name=?
-2020-03-03 21:56:19 - binding parameter [1] as [VARCHAR] - [test]
+2020-03-11 15:15:38 - binding parameter [1] as [VARCHAR] - [test]
 </pre>
 </span>
 </div>
@@ -214,7 +214,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.2.1</a> at Mar 3, 2020, 9:56:19 PM</p>
+<a href="http://www.gradle.org">Gradle 6.2.1</a> at Mar 11, 2020, 3:15:38 PM</p>
 </div>
 </div>
 </body>
